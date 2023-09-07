@@ -1,0 +1,18 @@
+# 端口
+server:
+  port: 8081
+
+spring:
+  datasource:
+    username: system
+    password: stsys
+    url: jdbc:oracle:thin:@//localhost:1521/Stsys
+    driver-class-name: oracle.jdbc.OracleDriver
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      table-prefix: scott.tb_
+  type-aliases-package: com.company.pojo
