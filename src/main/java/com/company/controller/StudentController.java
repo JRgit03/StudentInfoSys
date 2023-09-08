@@ -17,6 +17,11 @@ public class StudentController {
 	@Resource
 	private IStudentService studentService;
 
+	@GetMapping
+	public List<Student> studentList(){
+		return studentService.list();
+	}
+
 	@PostMapping("/{current}/{size}")
 	public IPage<Student> getAllStudent(@PathVariable long current, @PathVariable long size, @RequestBody Student student){
 		System.out.println(student);
